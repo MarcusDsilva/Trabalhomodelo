@@ -21,6 +21,7 @@ public class FrcadUsuario extends javax.swing.JFrame {
 
     /**
      * Creates new form FrcadUsuario
+     * @throws java.sql.SQLException
      */
     public FrcadUsuario() throws SQLException {
         initComponents();

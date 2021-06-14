@@ -99,7 +99,5 @@ public class Veiculo {
     void add(Veiculo veiculos) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-
-    
-    
 }
+ 

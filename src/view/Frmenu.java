@@ -44,7 +44,9 @@ public class Frmenu extends javax.swing.JFrame {
         jMenuItem3 = new javax.swing.JMenuItem();
         jSeparator1 = new javax.swing.JPopupMenu.Separator();
         jMenuItem5 = new javax.swing.JMenuItem();
+        jMenuItem7 = new javax.swing.JMenuItem();
         jMenuItem6 = new javax.swing.JMenuItem();
+        jMenuItem8 = new javax.swing.JMenuItem();
         jMenu7 = new javax.swing.JMenu();
         jMenuItem4 = new javax.swing.JMenuItem();
         jMenu8 = new javax.swing.JMenu();
@@ -106,9 +108,27 @@ public class Frmenu extends javax.swing.JFrame {
         });
         jMenu6.add(jMenuItem5);
 
+        jMenuItem7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icones/iconfinder_5120885_dairy_factory_industry_manufacture_processing_icon_20px.png"))); // NOI18N
+        jMenuItem7.setText("Fabricante");
+        jMenuItem7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem7ActionPerformed(evt);
+            }
+        });
+        jMenu6.add(jMenuItem7);
+
         jMenuItem6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icones/sair.png"))); // NOI18N
         jMenuItem6.setText("sair");
         jMenu6.add(jMenuItem6);
+
+        jMenuItem8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icones/modelo.png"))); // NOI18N
+        jMenuItem8.setText("Modelo");
+        jMenuItem8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem8ActionPerformed(evt);
+            }
+        });
+        jMenu6.add(jMenuItem8);
 
         jMenuBar1.add(jMenu6);
 
@@ -152,9 +172,28 @@ public class Frmenu extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuItem3ActionPerformed
 
     private void jMenuItem5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem5ActionPerformed
-        new FrcadVeiculo().setVisible(true);
-       
+      try {
+            new FrcadVeiculo().setVisible(true);
+        } catch (Exception ex) {
+            Logger.getLogger(FrcadVeiculo.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }//GEN-LAST:event_jMenuItem5ActionPerformed
+
+    private void jMenuItem7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem7ActionPerformed
+       try {
+            new FrCadFabricante().setVisible(true);
+        } catch (SQLException ex) {
+            Logger.getLogger(FrCadFabricante.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }//GEN-LAST:event_jMenuItem7ActionPerformed
+
+    private void jMenuItem8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem8ActionPerformed
+    try{
+    new FrCadModelo().setVisible(true);
+    }catch(SQLException ex){
+    Logger.getLogger(FrCadModelo.class.getName()).log(Level.SEVERE, null, ex);
+    }
+    }//GEN-LAST:event_jMenuItem8ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -208,6 +247,8 @@ public class Frmenu extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuItem4;
     private javax.swing.JMenuItem jMenuItem5;
     private javax.swing.JMenuItem jMenuItem6;
+    private javax.swing.JMenuItem jMenuItem7;
+    private javax.swing.JMenuItem jMenuItem8;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPopupMenu.Separator jSeparator1;
     // End of variables declaration//GEN-END:variables
